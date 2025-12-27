@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مقاله تخصصی در مورد اشتباهات رایج طراحی UX توسط امیرعلی عابدینی - راهکارهای عملی برای کاهش نرخ پرش و افزایش تعامل کاربر">
+    <link rel="icon" href="titel-logo.png" type="image/png">
+    <title>۷ اشتباه رایج در طراحی UX که بازدیدکنندگان را فراری می‌دهد | امیرعلی عابدینی</title>
+    
+    <!-- لینک‌های CSS -->
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    
+    <style>
+        /* استایل‌های مخصوص صفحه مقاله - دقیقاً مثل قبلی */
+        :root {
+            --primary-color: #4da6e7;
+            --secondary-color: #ff6b35;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #eaeaea;
+        }
+        
+        .article-hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 120px 0 60px;
+            margin-bottom: 60px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .meta-item i {
+            color: var(--primary-color);
+        }
+        
+        .article-author {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .article-featured-image {
+            width: 100%;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #444;
+            text-align: justify;
+        }
+        
+        .article-section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            border-right: 5px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #eee;
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background: var(--light-bg);
+            border-right: 4px solid var(--secondary-color);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        
+        .key-term {
+            color: var(--secondary-color);
+            font-weight: 700;
+            background: #fff5f2;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .important-note {
+            color: #2e7d32;
+            font-weight: 600;
+            background: #f1f8e9;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .warning-note {
+            color: #d32f2f;
+            font-weight: 600;
+            background: #ffebee;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .article-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        
+        .tag {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .tag:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+        
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .article-section {
+                padding: 20px;
+            }
+            
+            .article-navigation {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .article-meta {
+                gap: 15px;
+            }
+        }
+        
+        .back-to-blog {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .back-to-blog:hover {
+            color: var(--secondary-color);
+            transform: translateX(-5px);
+        }
+        
+        /* رفع مشکل ایمیل و لوگو - مثل قبلی */
+        .pre-header .contact-info-value {
+            font-size: 13px !important;
+            word-break: break-all !important;
+            max-width: 150px;
+            display: inline-block;
+        }
+        
+        .pre-header .contact-info-item {
+            min-width: 190px !important;
+            padding: 8px 12px !important;
+        }
+        
+        .logo img {
+            max-height: 45px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+        
+        @media (max-width: 768px) {
+            .pre-header .contact-info-value {
+                font-size: 11px !important;
+                max-width: 120px;
+            }
+            
+            .pre-header .contact-info-item {
+                min-width: 160px !important;
+                padding: 6px 10px !important;
+            }
+            
+            .logo img {
+                max-height: 35px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pre-Header -->
+    <div class="pre-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8 col-7">
+                    <div class="contact-info-container">
+                        <a href="tel:+989300567109" class="contact-info-item" title="تماس با من">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">شماره تماس</span>
+                                <span class="contact-info-value phone-number">0930 056 7109</span>
+                            </div>
+                        </a>
+                        <a href="mailto:amiraliabedini103@gmail.com" class="contact-info-item" title="ارسال ایمیل">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">آدرس ایمیل</span>
+                                <span class="contact-info-value">amiraliabedini103@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-5">
+                    <ul class="social-media">
+                        <li><a href="https://t.me/Arta_amir" target="_blank" rel="noopener" title="تلگرام">
+                            <span class="messenger-icon telegram-icon" aria-label="تلگرام">T</span>
+                        </a></li>
+                        <li><a href="https://eitaa.com/Arta_amir" target="_blank" rel="noopener" title="ایتا">
+                            <span class="messenger-icon eitaa-icon" aria-label="ایتا">E</span>
+                        </a></li>
+                        <li><a href="https://rubika.ir/Arta_amir_88" target="_blank" rel="noopener" title="روبیکا">
+                            <span class="messenger-icon rubika-icon" aria-label="روبیکا">R</span>
+                        </a></li>
+                        <li><a href="https://web.shad.ir/#/user/Arta_amir_88" target="_blank" rel="noopener" title="شاد">
+                            <span class="messenger-icon shad-icon" aria-label="شاد">S</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo-v3.png" alt="لوگو - امیرعلی عابدینی">
+                        </a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html">خانه</a></li>
+                            <li class="scroll-to-section"><a href="index.html#about">درباره ما</a></li>
+                            <li class="scroll-to-section"><a href="index.html#services">خدمات</a></li>
+                            <li class="scroll-to-section"><a href="index.html#portfolio">پروژه‌ها</a></li>
+                            <li class="scroll-to-section"><a href="index.html#blog" class="active">بلاگ</a></li>
+                            <li class="scroll-to-section"><a href="index.html#contact">تماس</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="index.html#contact">درخواست مشاوره</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>منو</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Hero Section -->
+    <div class="article-hero">
+        <div class="article-container">
+            <a href="index.html#blog" class="back-to-blog">
+                <i class="fa fa-arrow-right"></i> بازگشت به مقالات
+            </a>
+            <h1 class="article-title">۷ اشتباه رایج در طراحی UX که بازدیدکنندگان را فراری می‌دهد</h1>
+            
+            <div class="article-meta">
+                <div class="meta-item">
+                    <i class="fa fa-user"></i>
+                    <span class="article-author">امیرعلی عابدینی</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-calendar"></i>
+                    <span>۳۰ آذر ۱۴۰۴</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-clock"></i>
+                    <span>زمان مطالعه: ۱۱ دقیقه</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-eye"></i>
+                    <span>۱,۳۴۵ بازدید</span>
+                </div>
+            </div>
+            
+            <img src="UX False-LOGO.png" width="10%" alt="تصویر مقاله طراحی UX" class="article-featured-image">
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="article-container">
+        <div class="article-content">
+            <!-- مقدمه -->
+            <div class="article-section">
+                <h2 class="section-title">مقدمه: وقتی UX بد است، کاربر فرار می‌کند!</h2>
+                <p>سلام دوستان! <strong>امیرعلی عابدینی</strong> هستم، امروز با موضوعی حیاتی براتون می‌نویسم که در پروژه‌هایم <span class="key-term">نرخ پرش (Bounce Rate)</span> سایت‌ها رو تا ۷۰٪ کاهش داده: طراحی تجربه کاربری درست!</p>
+                <p>همین الان دارم روی سایتی کار می‌کنم که نرخ پرشش ۸۵٪ بود! کاربران وارد می‌شدند و فوراً می‌رفتند. بعد از رفع اشتباهات UX، الان نرخ پرش به ۳۲٪ رسیده و <span class="important-note">فروش ۲٫۵ برابر</span> شده!</p>
+                
+                <div class="highlight-box">
+                    <p><strong>نکته طلایی از امیرعلی عابدینی:</strong> کاربران امروزی صبر و تحمل کمی دارند. اگر در <span class="warning-note">۳ ثانیه اول</span> نتوانید نیازشان را برآورده کنید، می‌روند و دیگر برنمی‌گردند! طراحی UX خوب مثل مهمان‌نوازی در فضای دیجیتال است.</p>
+                </div>
+            </div>
+
+            <!-- بخش 1 -->
+            <div class="article-section">
+                <h2 class="section-title">۱. منوی گیج‌کننده: کاربر گم می‌شود!</h2>
+                <p>اولین و مرگبارترین اشتباه: <span class="key-term">منوی ناوبری پیچیده</span>! من <strong>امیرعلی عابدینی</strong> بارها دیده‌ام سایت‌هایی با ۲۰ آیتم منو که کاربر رو کاملاً سردرگم می‌کنن.</p>
+                
+                <p><strong>مثال واقعی:</strong> پروژه اخیر یک فروشگاه آنلاین - منوی اصلی ۱۸ آیتم داشت! کاربران میان دنبال "لپ‌تاپ" می‌گردن، اما باید بین "محصولات دیجیتال" → "کامپیوتر" → "نوت‌بوک" کلیک کنن!</p>
+                
+                <div class="highlight-box">
+                    <h4>راهکار عملی:</h4>
+                    <ul>
+                        <li>حداکثر ۷ آیتم در منوی اصلی</li>
+                        <li>استفاده از مگامنو برای دسته‌بندی‌های بزرگ</li>
+                        <li>اضافه کردن نوار جستجوی قوی</li>
+                        <li>مسیر ناوبری (Breadcrumb) واضح</li>
+                    </ul>
+                    <p>این اصلاحات رو در پروژه‌های <strong>امیرعلی عابدینی</strong> انجام دادیم و <span class="important-note">زمان پیدا کردن محصول ۶۵٪ کاهش</span> یافت!</p>
+                </div>
+            </div>
+
+            <!-- بخش 2 -->
+            <div class="article-section">
+                <h2 class="section-title">۲. سرعت لود کند: صبر کاربر تمام می‌شود!</h2>
+                <p>دوست عزیز، این آمار رو جدی بگیر: <span class="key-term">۵۳٪ کاربران موبایل</span> اگر سایت در ۳ ثانیه لود نشود، می‌روند! من <strong>امیرعلی عابدینی</strong> همیشه اول سرعت سایت رو چک می‌کنم.</p>
+                
+                <p><strong>مهمترین دلایل کندی:</strong></p>
+                <ol>
+                    <li>تصاویر سنگین و بهینه‌نشده</li>
+                    <li>استفاده بی‌رویه از پلاگین‌ها</li>
+                    <li>کدهای CSS/JS بهینه‌نشده</li>
+                    <li>هاستینگ ضعیف</li>
+                </ol>
+                
+                <p>در یک پروژه، با بهینه‌سازی تصاویر و حذف پلاگین‌های غیرضروری، سرعت از ۷ ثانیه به ۱٫۸ ثانیه رسید و <span class="important-note">نرخ تبدیل ۴۰٪ افزایش</span> یافت!</p>
+            </div>
+
+            <!-- بخش 3 -->
+            <div class="article-section">
+                <h2 class="section-title">۳. طراحی غیرریسپانسیو: کاربر موبایل عصبانی می‌شود!</h2>
+                <p>الان <span class="key-term">۶۸٪ ترافیک وب</span> از موبایل است! اگر سایت شما روی موبایل درست نمایش داده نشود، دارید بیشتر مشتریانتان را از دست می‌دهید.</p>
+                
+                <p>من <strong>امیرعلی عابدینی</strong> این اشتباهات موبایل رو زیاد دیده‌ام:</p>
+                <ul>
+                    <li>دکمه‌های بسیار کوچک (حتی با انگشت کوچک هم نمی‌شود کلیک کرد!)</li>
+                    <li>فونت‌های ریز که باید زوم کرد</li>
+                    <li>منوی افقی که روی موبایل کار نمی‌کند</li>
+                    <li>پاپ‌آپ‌های بزرگ که بسته نمی‌شوند</li>
+                </ul>
+                
+                <p><span class="warning-note">تست ضروری:</strong> سایت خود را روی ۳ دستگاه تست کنید: آیفون، اندروید، تبلت. من خودم همیشه اینکار رو می‌کنم!</p>
+            </div>
+
+            <!-- بخش 4 -->
+            <div class="article-section">
+                <h2 class="section-title">۴. فرم‌های طولانی و پیچیده: کاربر خسته می‌شود!</h2>
+                <p>اینجا جاییه که بیشترین فرصت‌های فروش از دست می‌روند! من <strong>امیرعلی عابدینی</strong> فرم‌های ۲۰ فیلدی دیده‌ام که کاربر رو تا مرز جنون می‌برن!</p>
+                
+                <div class="highlight-box">
+                    <h4>قانون طلایی فرم‌نویسی:</h4>
+                    <p><strong>هر فیلد اضافی = ۱۰٪ کاهش نرخ تکمیل فرم</strong></p>
+                    <p>این یعنی اگر فرم شما ۱۰ فیلد بی‌جهت داشته باشد، ۱۰۰٪ کاربران را از دست می‌دهید!</p>
+                </div>
+                
+                <p><strong>راهکارهای من امیرعلی عابدینی:</strong></p>
+                <ol>
+                    <li>حداقل فیلدهای ضروری را بپرسید (نام، ایمیل، تلفن)</li>
+                    <li>از تک‌کلیک‌ها استفاده کنید (مثلاً ورود با گوگل)</li>
+                    <li>اعتبارسنجی لحظه‌ای داشته باشید</li>
+                    <li>پیش‌نمایش داده‌ها قبل از ارسال</li>
+                </ol>
+            </div>
+
+            <!-- بخش 5 -->
+            <div class="article-section">
+                <h2 class="section-title">۵. عدم وضوح در CTA: کاربر نمی‌داند چه کار کند!</h2>
+                <p><span class="key-term">CTA یا Call to Action</span> باید مثل چراغ راهنما باشد! اما بسیاری سایت‌ها CTAهای گیج‌کننده دارند.</p>
+                
+                <p>من <strong>امیرعلی عابدینی</strong> این اشتباهات رو دیدم:</p>
+                <ul>
+                    <li>دکمه "ثبت نام" با رنگ خاکستری کمرنگ</li>
+                    <li>متن مبهم: "ادامه دهید" به جای "خرید کنید"</li>
+                    <li>CTAهای متعدد و رقابتی در یک صفحه</li>
+                    <li>دکمه‌هایی که شبیه دکمه نیستند!</li>
+                </ul>
+                
+                <p>یک پروژه داشتیم که با تغییر CTA از "دریافت اطلاعات" به "مشاوره رایگان بگیرید"، <span class="important-note">کلیک‌ها ۲۲۰٪ افزایش</span> یافت!</p>
+                
+                <div class="highlight-box">
+                    <h4>فرمول CTA ایده‌آل:</h4>
+                    <p><strong>فعل قوی + سود مشخص + حس فوریت = CTA قدرتمند</strong></p>
+                    <p>مثال: "همین حالا مشاوره رایگان بگیرید!"</p>
+                </div>
+            </div>
+
+            <!-- بخش 6 -->
+            <div class="article-section">
+                <h2 class="section-title">۶. عدم سازگاری مرورگرها: کاربر دچار خطا می‌شود!</h2>
+                <p>کاربران از مرورگرهای مختلف استفاده می‌کنند: Chrome, Firefox, Safari, Edge. اگر سایت شما فقط در Chrome کار کند، بقیه کاربران را از دست می‌دهید.</p>
+                
+                <p>من <strong>امیرعلی عابدینی</strong> همیشه سایت‌ها رو در ۴ مرورگر اصلی تست می‌کنم:</p>
+                <ol>
+                    <li>گوگل کروم (۶۵٪ کاربران)</li>
+                    <li>سفاری (۱۸٪ کاربران)</li>
+                    <li>فایرفاکس (۴٪ کاربران)</li>
+                    <li>اج (۳٪ کاربران)</li>
+                </ol>
+                
+                <p><span class="warning-note">اشتباه رایج:</span> استفاده از ویژگی‌های CSS3 که در Safari پشتیبانی نمی‌شود. همیشه از prefixes استفاده کنید!</p>
+            </div>
+
+            <!-- بخش 7 -->
+            <div class="article-section">
+                <h2 class="section-title">۷. عدم توجه به دسترسی‌پذیری (Accessibility): کاربران خاص حذف می‌شوند!</h2>
+                <p><span class="key-term">۱۵٪ جمعیت جهان</span> نوعی معلولیت دارند! طراحی بدون درنظرگیری دسترسی‌پذیری، این کاربران را حذف می‌کند.</p>
+                
+                <p>من <strong>امیرعلی عابدینی</strong> این نکات ساده اما حیاتی رو رعایت می‌کنم:</p>
+                <ul>
+                    <li>کنتراست رنگی مناسب (متن تیره روی زمینه روشن)</li>
+                    <li>متن جایگزین برای تصاویر (alt text)</li>
+                    <li>قابلیت ناوبری با کیبورد</li>
+                    <li>سایز فونت قابل تنظیم</li>
+                </ul>
+                
+                <p>این کار نه تنها اخلاقی است، بلکه <span class="important-note">سئو سایت رو هم بهبود</span> می‌دهد!</p>
+            </div>
+
+            <!-- نتیجه‌گیری -->
+            <div class="article-section">
+                <h2 class="section-title">نتیجه‌گیری: UX خوب = مشتری راضی = فروش بیشتر!</h2>
+                <p>دوستان گرامی، جمع‌بندی صحبت‌های <strong>امیرعلی عابدینی</strong>:</p>
+                
+                <ol>
+                    <li>کاربر را مرکز توجه قرار دهید</li>
+                    <li>ساده طراحی کنید - پیچیدگی دشمن UX است</li>
+                    <li>روی همه دستگاه‌ها تست کنید</li>
+                    <li>داده‌ها را دنبال کنید (Google Analytics)</li>
+                    <li>مستمر بهبود دهید - UX هیچگاه تمام نمی‌شود</li>
+                </ol>
+                
+                <p>یادتان باشد: <strong>"طراحی UX خوب مثل اکسیژن است - وقتی وجود دارد کسی متوجه نمی‌شود، اما وقتی نباشد همه می‌میرند!"</strong></p>
+                
+                <div class="highlight-box">
+                    <p><strong>سخن پایانی:</strong> همین امروز سایت خود را با این ۷ نکته چک کنید. اگر هر کدام از این اشتباهات را دارید، سریع اصلاح کنید. اگر نیاز به کمک دارید، من <strong>امیرعلی عابدینی</strong> از طریق شماره‌های سایت در خدمتم. طراحی کاربرپسند، فروش پسند!</p>
+                </div>
+            </div>
+
+            <!-- تگ‌ها -->
+            <div class="article-tags">
+                <a href="#" class="tag">تجربه کاربری</a>
+                <a href="#" class="tag">طراحی UX</a>
+                <a href="#" class="tag">نرخ پرش</a>
+                <a href="#" class="tag">طراحی وب</a>
+                <a href="#" class="tag">بهینه‌سازی</a>
+                <a href="#" class="tag">موبایل فرست</a>
+                <a href="#" class="tag">امیرعلی عابدینی</a>
+            </div>
+
+            <!-- نویگیشن -->
+            <div class="article-navigation">
+                <a href="article-ads-budget.html" class="nav-btn">
+                    <i class="fa fa-arrow-right"></i>
+                    <span>مقاله قبلی<br><small>مدیریت بودجه تبلیغاتی</small></span>
+                </a>
+                <a href="index.html#blog" class="nav-btn">
+                    <span>بازگشت به بلاگ<br><small>مقالات بیشتر</small></span>
+                    <i class="fa fa-list"></i>
+                </a>
+                <a href="article-details.html" class="nav-btn">
+                    <span>مقاله بعدی<br><small>سئو در سال ۱۴۰۵</small></span>
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>تمام حقوق این وبسایت برای <strong>امیرعلی عابدینی</strong> محفوظ است. © ۱۴۰۴
+                        <br>طراحی و توسعه: <a href="index.html" title="امیرعلی عابدینی">امیرعلی عابدینی</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+    <script>
+        // اسکریپت مخصوص صفحه مقاله
+        document.addEventListener('DOMContentLoaded', function() {
+            // هایلایت کلمات کلیدی
+            const keyTerms = document.querySelectorAll('.key-term');
+            keyTerms.forEach(term => {
+                term.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                });
+                
+                term.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+            
+            // اسکرول نرم برای تگ‌ها
+            document.querySelectorAll('.tag').forEach(tag => {
+                tag.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tagText = this.textContent;
+                    alert('جستجوی مقالات با تگ: ' + tagText);
+                });
+            });
+            
+            // مدیریت اسکرول هدر
+            window.addEventListener('scroll', function() {
+                const preHeader = document.querySelector('.pre-header');
+                if (window.scrollY > 100) {
+                    preHeader.style.backdropFilter = 'blur(20px)';
+                    preHeader.style.background = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    preHeader.style.backdropFilter = 'blur(15px)';
+                    preHeader.style.background = 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+            
+            // لینک‌دهی بین مقالات - حلقه کامل
+            const prevBtn = document.querySelector('.nav-btn:first-child');
+            const nextBtn = document.querySelector('.nav-btn:last-child');
+            
+            // حلقه کامل مقالات
+            if (nextBtn && nextBtn.getAttribute('href') === 'article-details.html') {
+                nextBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'article-details.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
