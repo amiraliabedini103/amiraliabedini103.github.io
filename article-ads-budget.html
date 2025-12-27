@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مقاله تخصصی مدیریت بودجه تبلیغاتی در دوران رکود اقتصادی توسط امیرعلی عابدینی - راهکارهای هوشمند برای بازدهی بیشتر با هزینه کمتر">
+    <link rel="icon" href="titel-logo.png" type="image/png">
+    <title>مدیریت بودجه تبلیغاتی در دوران رکود اقتصادی | امیرعلی عابدینی</title>
+    
+    <!-- لینک‌های CSS -->
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    
+    <style>
+        /* استایل‌های مخصوص صفحه مقاله - دقیقاً مثل قبلی */
+        :root {
+            --primary-color: #4da6e7;
+            --secondary-color: #ff6b35;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #eaeaea;
+        }
+        
+        .article-hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 120px 0 60px;
+            margin-bottom: 60px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .meta-item i {
+            color: var(--primary-color);
+        }
+        
+        .article-author {
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .article-featured-image {
+            width: 85%;
+            border-radius: 15px;
+            margin: 40px 0;
+            margin-right: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #444;
+            text-align: justify;
+        }
+        
+        .article-section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            border-right: 5px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #eee;
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background: var(--light-bg);
+            border-right: 4px solid var(--secondary-color);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        
+        .key-term {
+            color: var(--secondary-color);
+            font-weight: 700;
+            background: #fff5f2;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .important-note {
+            color: #2e7d32;
+            font-weight: 600;
+            background: #f1f8e9;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .warning-note {
+            color: #d32f2f;
+            font-weight: 600;
+            background: #ffebee;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .article-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        
+        .tag {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .tag:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+        
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .article-section {
+                padding: 20px;
+            }
+            
+            .article-navigation {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .article-meta {
+                gap: 15px;
+            }
+        }
+        
+        .back-to-blog {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .back-to-blog:hover {
+            color: var(--secondary-color);
+            transform: translateX(-5px);
+        }
+        
+        /* رفع مشکل ایمیل و لوگو - مثل قبلی */
+        .pre-header .contact-info-value {
+            font-size: 13px !important;
+            word-break: break-all !important;
+            max-width: 150px;
+            display: inline-block;
+        }
+        
+        .pre-header .contact-info-item {
+            min-width: 190px !important;
+            padding: 8px 12px !important;
+        }
+        
+        .logo img {
+            max-height: 45px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+        
+        @media (max-width: 768px) {
+            .pre-header .contact-info-value {
+                font-size: 11px !important;
+                max-width: 120px;
+            }
+            
+            .pre-header .contact-info-item {
+                min-width: 160px !important;
+                padding: 6px 10px !important;
+            }
+            
+            .logo img {
+                max-height: 35px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pre-Header -->
+    <div class="pre-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8 col-7">
+                    <div class="contact-info-container">
+                        <a href="tel:+989300567109" class="contact-info-item" title="تماس با من">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">شماره تماس</span>
+                                <span class="contact-info-value phone-number">0930 056 7109</span>
+                            </div>
+                        </a>
+                        <a href="mailto:amiraliabedini103@gmail.com" class="contact-info-item" title="ارسال ایمیل">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">آدرس ایمیل</span>
+                                <span class="contact-info-value">amiraliabedini103@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-5">
+                    <ul class="social-media">
+                        <li><a href="https://t.me/Arta_amir" target="_blank" rel="noopener" title="تلگرام">
+                            <span class="messenger-icon telegram-icon" aria-label="تلگرام">T</span>
+                        </a></li>
+                        <li><a href="https://eitaa.com/Arta_amir" target="_blank" rel="noopener" title="ایتا">
+                            <span class="messenger-icon eitaa-icon" aria-label="ایتا">E</span>
+                        </a></li>
+                        <li><a href="https://rubika.ir/Arta_amir_88" target="_blank" rel="noopener" title="روبیکا">
+                            <span class="messenger-icon rubika-icon" aria-label="روبیکا">R</span>
+                        </a></li>
+                        <li><a href="https://web.shad.ir/#/user/Arta_amir_88" target="_blank" rel="noopener" title="شاد">
+                            <span class="messenger-icon shad-icon" aria-label="شاد">S</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo-v3.png" alt="لوگو - امیرعلی عابدینی">
+                        </a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html">خانه</a></li>
+                            <li class="scroll-to-section"><a href="index.html#about">درباره ما</a></li>
+                            <li class="scroll-to-section"><a href="index.html#services">خدمات</a></li>
+                            <li class="scroll-to-section"><a href="index.html#portfolio">پروژه‌ها</a></li>
+                            <li class="scroll-to-section"><a href="index.html#blog" class="active">بلاگ</a></li>
+                            <li class="scroll-to-section"><a href="index.html#contact">تماس</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="index.html#contact">درخواست مشاوره</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>منو</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Hero Section -->
+    <div class="article-hero">
+        <div class="article-container">
+            <a href="index.html#blog" class="back-to-blog">
+                <i class="fa fa-arrow-right"></i> بازگشت به مقالات
+            </a>
+            <h1 class="article-title">مدیریت بودجه تبلیغاتی در دوران رکود اقتصادی: هنر بازدهی بیشتر با هزینه کمتر</h1>
+            
+            <div class="article-meta">
+                <div class="meta-item">
+                    <i class="fa fa-user"></i>
+                    <span class="article-author">امیرعلی عابدینی</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-calendar"></i>
+                    <span>۱ دی ۱۴۰۴</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-clock"></i>
+                    <span>زمان مطالعه: ۱۵ دقیقه</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-eye"></i>
+                    <span>۱,۱۰۲ بازدید</span>
+                </div>
+            </div>
+            
+            <img src="ads-logo.png" alt="تصویر مقاله مدیریت بودجه تبلیغاتی" class="article-featured-image">
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="article-container">
+        <div class="article-content">
+            <!-- مقدمه -->
+            <div class="article-section">
+                <h2 class="section-title">مقدمه: رکود اقتصادی = مرگ تبلیغات؟ اشتباه نکنید!</h2>
+                <p>سلام دوستان! <strong>امیرعلی عابدینی</strong> هستم، امروز با یک موضوع داغ در خدمتتون: چگونه در شرایط <span class="key-term">رکود اقتصادی</span> نه تنها تبلیغات رو قطع نکنیم، بلکه هوشمندانه‌تر هزینه کنیم و بازدهی بیشتری بگیریم!</p>
+                <p>الان که این مقاله رو می‌نویسم، ۳ پروژه در دست دارم که صاحبانش می‌خواستن تبلیغات رو کامل قطع کنن! اما با استراتژی‌های درست، نه تنها قطع نکردیم، بلکه <span class="important-note">بازدهی ۲٫۵ برابر</span> گرفتیم!</p>
+                
+                <div class="highlight-box">
+                    <p><strong>نکته طلایی از امیرعلی عابدینی:</strong> رکود اقتصادی بزرگترین فرصت برای کسب‌وکارهای هوشمنده! رقبای ضعیف حذف می‌شن و بازار برای شما خالی می‌شه. فقط باید بلد باشید چطور از بودجه محدود بیشترین استفاده رو ببرید.</p>
+                </div>
+            </div>
+
+            <!-- بخش 1 -->
+            <div class="article-section">
+                <h2 class="section-title">۱. قانون ۸۰/۲۰: ۲۰٪ کانال‌ها، ۸۰٪ نتایج!</h2>
+                <p>اولین کاری که من <strong>امیرعلی عابدینی</strong> در مشاوره‌ها انجام می‌دم: <span class="key-term">تحلیل کانال‌های تبلیغاتی</span> بر اساس داده‌های واقعی.</p>
+                
+                <p>تجربه نشان داده که معمولاً:</p>
+                <ul>
+                    <li>۸۰٪ بودجه تبلیغاتی روی کانال‌های کم‌بازده هدر می‌رود</li>
+                    <li>تنها ۲۰٪ کانال‌ها واقعاً نتایج می‌دهند</li>
+                    <li>۱۰٪ مخاطبان، ۹۰٪ فروش را ایجاد می‌کنند</li>
+                </ul>
+                
+                <p>در پروژه اخیر یک فروشگاه لوازم خانگی، دیدم <span class="warning-note">۶۰٪ بودجه</span> روی اینستاگرام تبلیغات Story می‌کنن که نرخ تبدیلش ۰٫۲٪ است! درحالی که گوگل ادز با ۸٪ تبدیل، فقط ۱۵٪ بودجه می‌گیره!</p>
+                
+                <div class="highlight-box">
+                    <h4>سؤال کلیدی که باید بپرسید:</h4>
+                    <ol>
+                        <li>هزینه جذب هر مشتری (CAC) در هر کانال چقدر است؟</li>
+                        <li>ارزش طول عمر مشتری (LTV) چقدر است؟</li>
+                        <li>نرخ بازگشت سرمایه (ROI) هر کانال چقدر است؟</li>
+                    </ol>
+                    <p>اگر جواب این سوالات رو ندارید، حتماً با من <strong>امیرعلی عابدینی</strong> مشورت کنید!</p>
+                </div>
+            </div>
+
+            <!-- بخش 2 -->
+            <div class="article-section">
+                <h2 class="section-title">۲. ۵ اشتباه مرگبار در تخصیص بودجه</h2>
+                <p>من <strong>امیرعلی عابدینی</strong> این اشتباهات رو بارها در کسب‌وکارهای مختلف دیده‌ام:</p>
+                
+                <ol>
+                    <li><span class="warning-note">پخش کردن بودجه:</span> کمی به اینستاگرام، کمی به گوگل، کمی به تبلیغات بنری</li>
+                    <li><span class="warning-note">نداشتن هدف مشخص:</span> تبلیغات برای "معرفی برند" بدون معیار اندازه‌گیری</li>
+                    <li><span class="warning-note">کپی‌برداری از رقبا:</span: چون رقیب در فلان کانال تبلیغ می‌کند، شما هم باید</li>
+                    <li><span class="warning-note">قطع ناگهانی تبلیغات موفق:</span> به محض دیدن نتیجه اولیه</li>
+                    <li><span class="warning-note">تمرکز روی کمیت به جای کیفیت:</span: هزاران کلیک بی‌کیفیت</li>
+                </ol>
+                
+                <p>یادم می‌آید یک شرکت خدمات B2B <span class="important-note">ماهی ۲۰ میلیون</span> روی تبلیغات اینستاگرام هزینه می‌کرد درحالی که مشتریانش مدیران شرکتی بودند که اصلاً اینستاگرام چک نمی‌کردند!</p>
+            </div>
+
+            <!-- بخش 3 -->
+            <div class="article-section">
+                <h2 class="section-title">۳. استراتژی بودجه‌بندی هوشمند: ۵۰-۳۰-۲۰</h2>
+                <p>اینجاست که من <strong>امیرعلی عابدینی</strong> فرمول عملی خودم رو معرفی می‌کنم: <span class="key-term">فرمول ۵۰-۳۰-۲۰</span></p>
+                
+                <ul>
+                    <li><strong>۵۰٪ بودجه:</strong> کانال‌های اثبات‌شده با ROI مثبت</li>
+                    <li><strong>۳۰٪ بودجه:</strong> تست کانال‌های جدید و بهینه‌سازی</li>
+                    <li><strong>۲۰٪ بودجه:</strong> بازاریابی محتوا و سئو برای رشد بلندمدت</li>
+                </ul>
+                
+                <p>این فرمول رو در یک استارتاپ فناوری تست کردم: در ۶ ماه <span class="important-note">هزینه جذب مشتری ۴۰٪ کاهش</span> و <span class="important-note">نرخ تبدیل ۶۰٪ افزایش</span> یافت!</p>
+                
+                <div class="highlight-box">
+                    <h4>مثال عملی برای بودجه ۱۰ میلیون تومانی:</h4>
+                    <ul>
+                        <li><strong>۵ میلیون:</strong> گوگل ادز (کانال اثبات‌شده)</li>
+                        <li><strong>۳ میلیون:</strong> تست تبلیغات در لینکدین (کانال جدید)</li>
+                        <li><strong>۲ میلیون:</strong> تولید محتوای تخصصی برای سئو</li>
+                    </ul>
+                    <p>تقسیم‌بندی باید بر اساس داده‌های واقعی کسب‌وکار شما باشد.</p>
+                </div>
+            </div>
+
+            <!-- بخش 4 -->
+            <div class="article-section">
+                <h2 class="section-title">۴. ابزارهای رایگان برای کنترل و بهینه‌سازی بودجه</h2>
+                <p>نیازی به خرید ابزارهای گران‌قیمت نیست! من <strong>امیرعلی عابدینی</strong> این لیست ابزارهای رایگان رو توصیه می‌کنم:</p>
+                
+                <div class="highlight-box">
+                    <h4>ابزارهای مانیتورینگ و آنالیز:</h4>
+                    <ul>
+                        <li><strong>Google Analytics:</strong> رایگان و قدرتمند برای تحلیل ترافیک</li>
+                        <li><strong>Google Data Studio:</strong> داشبوردهای گزارش‌گیری رایگان</li>
+                        <li><strong>Facebook Ads Library:</strong> تحلیل تبلیغات رقبا - کاملاً رایگان</li>
+                        <li><strong>Ubersuggest:</strong> تحقیق کلمات کلیدی - نسخه رایگان کافی است</li>
+                    </ul>
+                </div>
+                
+                <p>یک ترفند از <strong>امیرعلی عابدینی</strong>: هفته‌ای ۱ ساعت وقت بگذارید و با Google Analytics کار کنید. در یک ماه متخصص می‌شوید!</p>
+            </div>
+
+            <!-- بخش 5 -->
+            <div class="article-section">
+                <h2 class="section-title">۵. بازاریابی محتوا: سلاح مخفی دوران رکود</h2>
+                <p>در دوران رکود، <span class="key-term">بازاریابی محتوا</span> از تبلیغات پولی مهم‌تر است! چرا؟</p>
+                
+                <ul>
+                    <li>هزینه کمتری دارد</li>
+                    <li>اعتماد بیشتری ایجاد می‌کند</li>
+                    <li>اثر بلندمدت دارد</li>
+                    <li>مشتریان وفادار می‌سازد</li>
+                </ul>
+                
+                <p>من <strong>امیرعلی عابدینی</strong> برای یک کلینیک زیبایی، استراتژی محتوایی طراحی کردم که در ۴ ماه <span class="important-note">ترافیک ارگانیک ۳۰۰٪ رشد</span> کرد و نیاز به تبلیغات پولی ۷۰٪ کاهش یافت!</p>
+                
+                <p><strong>۳ نوع محتوای ضروری:</strong></p>
+                <ol>
+                    <li>مقالات پاسخ به سوالات متداول مشتریان</li>
+                    <li>ویدئوهای آموزشی رایگان</li>
+                    <li>مطالب موردی (Case Study) از پروژه‌های موفق</li>
+                </ol>
+            </div>
+
+            <!-- بخش 6 -->
+            <div class="article-section">
+                <h2 class="section-title">۶. مذاکره هوشمند با پلتفرم‌های تبلیغاتی</h2>
+                <p>بسیاری نمی‌دانند که می‌توانند <span class="key-term">مذاکره کنند</span>! من <strong>امیرعلی عابدینی</strong> این ترفندها را به شما می‌دهم:</p>
+                
+                <ul>
+                    <li><strong>اعتبار تبلیغاتی درخواست کنید:</strong> از پشتیبانی گوگل یا فیسبوک</li>
+                    <li><strong>پرداخت مرحله‌ای:</strong> به جای پرداخت یکجا</li>
+                    <li><strong>استفاده از کوپن‌ها:</strong> بسیاری پلتفرم‌ها کوپن‌های ویژه دارند</li>
+                    <li><strong>همکاری با اینفلوئنسرهای کوچک:</strong> به جای سلبریتی‌های گران</li>
+                </ul>
+                
+                <p>در یک پروژه، با مذاکره <span class="important-note">۱۵٪ اعتبار تبلیغاتی رایگان</span> از گوگل گرفتم! فقط کافی است فعال باشید و درخواست دهید.</p>
+            </div>
+
+            <!-- نتیجه‌گیری -->
+            <div class="article-section">
+                <h2 class="section-title">نتیجه‌گیری: رکود، آزمون هوشمندی شماست!</h2>
+                <p>دوستان گرامی، جمع‌بندی صحبت‌های <strong>امیرعلی عابدینی</strong>:</p>
+                
+                <ol>
+                    <li>رکود اقتصادی پایان کار نیست، شروع بازی جدید است</li>
+                    <li>هوشمندانه هزینه کنید، نه کمتر</li>
+                    <li>داده‌ها را جدی بگیرید - احساسی تصمیم نگیرید</li>
+                    <li>بازاریابی محتوا سرمایه‌گذاری است، نه هزینه</li>
+                    <li>مستمر آزمایش و بهینه‌سازی کنید</li>
+                </ol>
+                
+                <p>یادتان باشد: <strong>"در طوفان رکود، کشتی‌های کوچک غرق می‌شوند و کشتی‌های بزرگ فرصت تصاحب دریا را پیدا می‌کنند."</strong></p>
+                
+                <div class="highlight-box">
+                    <p><strong>سخن پایانی:</strong> همین امروز بودجه تبلیغاتی خود را بررسی کنید. اگر سوالی دارید یا نیاز به مشاوره تخصصی دارید، من <strong>امیرعلی عابدینی</strong> از طریق شماره‌های سایت آماده کمک به شما هستم. موفق و پیروز باشید!</p>
+                </div>
+            </div>
+
+            <!-- تگ‌ها -->
+            <div class="article-tags">
+                <a href="#" class="tag">مدیریت بودجه</a>
+                <a href="#" class="tag">تبلیغات دیجیتال</a>
+                <a href="#" class="tag">رکود اقتصادی</a>
+                <a href="#" class="tag">بازدهی سرمایه</a>
+                <a href="#" class="tag">گوگل ادز</a>
+                <a href="#" class="tag">بازاریابی محتوا</a>
+                <a href="#" class="tag">امیرعلی عابدینی</a>
+            </div>
+
+            <!-- نویگیشن -->
+            <div class="article-navigation">
+                <a href="article-video.html" class="nav-btn">
+                    <i class="fa fa-arrow-right"></i>
+                    <span>مقاله قبلی<br><small>محتوای ویدئویی</small></span>
+                </a>
+                <a href="index.html#blog" class="nav-btn">
+                    <span>بازگشت به بلاگ<br><small>مقالات بیشتر</small></span>
+                    <i class="fa fa-list"></i>
+                </a>
+                <a href="article-ux-mistakes.html" class="nav-btn">
+                    <span>مقاله بعدی<br><small>اشتباهات طراحی UX</small></span>
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>تمام حقوق این وبسایت برای <strong>امیرعلی عابدینی</strong> محفوظ است. © ۱۴۰۴
+                        <br>طراحی و توسعه: <a href="index.html" title="امیرعلی عابدینی">امیرعلی عابدینی</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+    <script>
+        // اسکریپت مخصوص صفحه مقاله
+        document.addEventListener('DOMContentLoaded', function() {
+            // هایلایت کلمات کلیدی
+            const keyTerms = document.querySelectorAll('.key-term');
+            keyTerms.forEach(term => {
+                term.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                });
+                
+                term.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+            
+            // اسکرول نرم برای تگ‌ها
+            document.querySelectorAll('.tag').forEach(tag => {
+                tag.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tagText = this.textContent;
+                    alert('جستجوی مقالات با تگ: ' + tagText);
+                });
+            });
+            
+            // مدیریت اسکرول هدر
+            window.addEventListener('scroll', function() {
+                const preHeader = document.querySelector('.pre-header');
+                if (window.scrollY > 100) {
+                    preHeader.style.backdropFilter = 'blur(20px)';
+                    preHeader.style.background = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    preHeader.style.backdropFilter = 'blur(15px)';
+                    preHeader.style.background = 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+            
+            // لینک‌دهی بین مقالات
+            const prevBtn = document.querySelector('.nav-btn:first-child');
+            const nextBtn = document.querySelector('.nav-btn:last-child');
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        alert('این اولین مقاله است!');
+                    }
+                });
+            }
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        alert('مقاله بعدی به زودی منتشر می‌شود!');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
