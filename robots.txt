@@ -1,4 +1,29 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /search/
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
 
+# سرعت خزش (اختیاری)
+Crawl-delay: 2
+
+# آدرس sitemap
 Sitemap: https://amiraliabedini103.github.io/sitemap.xml
+
+# ربات‌های خاص
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /private/
+
+User-agent: Yandex
+Allow: /
+Disallow: /private/
