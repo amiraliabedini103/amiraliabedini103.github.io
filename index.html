@@ -175,74 +175,6 @@
       transform: translateY(-2px);
     }
 
-    /* برای موبایل */
-    @media (max-width: 768px) {
-      .pre-header {
-        padding: 8px 0 !important;
-        backdrop-filter: blur(10px) saturate(180%) !important;
-        -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
-      }
-      
-      .pre-header .contact-info-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px !important;
-      }
-      
-      .pre-header .contact-info-item {
-        width: 100% !important;
-        max-width: 280px !important;
-        justify-content: center;
-        padding: 8px 12px !important;
-      }
-      
-      .pre-header .contact-info-value {
-        max-width: 150px !important;
-        font-size: 12px !important;
-      }
-      
-      .pre-header .social-media {
-        justify-content: center;
-        gap: 6px !important;
-        margin-top: 10px;
-      }
-      
-      .pre-header .messenger-icon {
-        width: 32px !important;
-        height: 32px !important;
-      }
-      
-      body {
-        padding-top: 130px;
-      }
-    }
-    
-
-    /* برای نمایش در موبایل خیلی کوچک */
-    @media (max-width: 480px) {
-      .pre-header .contact-info-container {
-        flex-direction: column;
-        gap: 8px;
-      }
-      
-      .pre-header .contact-info-item {
-        min-width: 100% !important;
-        max-width: 100% !important;
-      }
-      
-      .pre-header .contact-info-value {
-        max-width: 200px !important;
-      }
-      
-      .pre-header .social-media {
-        gap: 4px !important;
-      }
-      
-      body {
-        padding-top: 150px;
-      }
-    }
-
     /* استایل‌های باقی مانده بدون تغییر */
     * {
       font-family: var(--font-fa) !important;
@@ -284,44 +216,441 @@
       text-justify: inter-word;
     }
     
-    
-    @media (max-width: 576px) {
-      h1 { font-size: 1.75rem; }
-      h2 { font-size: 1.5rem; }
-      .section-heading h4 { font-size: 1.6rem; }
-      .nav li a { font-size: 1rem; }
-      .pre-header .container { padding: 0 15px !important; }
-      .pre-header .contact-info-item { 
-        max-width: 100% !important; 
-        padding: 8px 15px !important; 
-        min-width: unset !important; 
-      }
-      .pre-header .contact-info-text { 
-        flex-direction: row !important; 
-        align-items: center !important; 
-        gap: 12px !important; 
-      }
-      .pre-header .contact-info-label { 
-        margin: 0 !important; 
-        font-size: 11px !important; 
-      }
-      .pre-header .contact-info-value { 
-        font-size: 12px !important; 
-      }
-      body { padding-top: 130px; }
-    }
-    
     @keyframes spinner-border { to { transform: rotate(360deg); } }
     
+    /* ========== ریسپانسیو برای موبایل ========== */
+    
+    /* تبلت (صفحه‌های کوچک) */
+    @media (max-width: 992px) {
+      .main-banner .row {
+        flex-direction: column-reverse;
+      }
+      
+      .main-banner .col-lg-6 {
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .right-image img, .left-content {
+        text-align: center;
+      }
+      
+      .right-image img {
+        max-width: 80%;
+        margin: 0 auto;
+        display: block;
+      }
+      
+      .section-heading h4 {
+        font-size: 1.8rem !important;
+      }
+    }
+    
+    /* موبایل (صفحه‌های متوسط) */
     @media (max-width: 768px) {
-      .contact-info-container { flex-direction: column; gap: 15px; }
-      .contact-info-item { padding: 6px 12px; }
-      .contact-info-value { font-size: 14px; }
+      body {
+        padding-top: 120px !important;
+        font-size: 14px;
+      }
+      
+      .pre-header {
+        padding: 8px 0 !important;
+        backdrop-filter: blur(10px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
+      }
+      
+      .pre-header .contact-info-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px !important;
+      }
+      
+      .pre-header .contact-info-item {
+        width: 100% !important;
+        max-width: 280px !important;
+        justify-content: center;
+        padding: 8px 12px !important;
+        min-width: unset !important;
+      }
+      
+      .pre-header .contact-info-value {
+        max-width: 150px !important;
+        font-size: 12px !important;
+      }
+      
+      .pre-header .social-media {
+        justify-content: center;
+        gap: 6px !important;
+        margin-top: 10px;
+      }
+      
+      .pre-header .messenger-icon {
+        width: 32px !important;
+        height: 32px !important;
+      }
+      
+      /* هدر اصلی */
+      .header-area {
+        position: relative;
+      }
+      
+      .main-nav {
+        padding: 10px 0;
+      }
+      
+      .main-nav .logo img {
+        max-height: 40px;
+      }
+      
+      .main-nav .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+      
+      .main-nav .nav.active {
+        display: flex;
+      }
+      
+      .main-nav .nav li {
+        width: 100%;
+        margin: 5px 0;
+      }
+      
+      .main-nav .nav li a {
+        display: block;
+        padding: 12px 15px;
+        border-radius: 6px;
+        transition: all 0.3s;
+      }
+      
+      .main-nav .nav li a:hover {
+        background: rgba(77, 166, 231, 0.1);
+      }
+      
+      .menu-trigger {
+        display: block;
+        cursor: pointer;
+        padding: 8px 15px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 5px;
+      }
+      
+      /* بنر اصلی */
+      .main-banner {
+        padding: 40px 0;
+      }
+      
+      .main-banner h1,
+      .main-banner h2 {
+        font-size: 1.6rem !important;
+        line-height: 1.4;
+      }
+      
+      .main-banner h6 {
+        font-size: 0.9rem;
+      }
+      
+      .main-banner p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-align: justify;
+      }
+      
+      .border-first-button a {
+        padding: 12px 25px;
+        font-size: 14px;
+      }
+      
+      /* بخش درباره ما */
+      .about .row {
+        flex-direction: column;
+      }
+      
+      .about-left-image, .about-right-content {
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .about-left-image img {
+        max-width: 80%;
+        margin: 0 auto 30px;
+        display: block;
+      }
+      
+      /* بخش خدمات */
+      .services .menu {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+      }
+      
+      .services .thumb {
+        min-width: 140px;
+        white-space: nowrap;
+        padding: 12px 15px;
+      }
+      
+      .services .left-text h4 {
+        font-size: 1.4rem;
+      }
+      
+      .ticks-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      
+      /* فرم درخواست رایگان */
+      #free-quote form .row {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      #free-quote form .col-lg-4 {
+        width: 100%;
+      }
+      
+      #free-quote input {
+        width: 100%;
+        padding: 12px 15px;
+      }
+      
+      #free-quote button {
+        width: 100%;
+        padding: 12px;
+      }
+      
+      /* پورتفولیو */
+      .portfolio-item {
+        margin-bottom: 20px;
+      }
+      
+      .portfolio-item img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .loop.owl-carousel {
+        padding: 0 15px;
+      }
+      
+      /* بلاگ */
+      .blog .row {
+        flex-direction: column;
+      }
+      
+      .blog-post, .blog-posts {
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .blog-post {
+        margin-bottom: 30px;
+      }
+      
+      .post-item {
+        flex-direction: column;
+        margin-bottom: 25px;
+      }
+      
+      .post-item .thumb {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      
+      .post-item .thumb img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      /* تماس با ما */
+      .contact-us .row {
+        flex-direction: column;
+      }
+      
+      #map {
+        height: 300px;
+        margin-bottom: 30px;
+      }
+      
+      #map iframe {
+        height: 300px !important;
+      }
+      
+      .fill-form .row {
+        flex-direction: column;
+      }
+      
+      .fill-form .col-lg-6 {
+        width: 100%;
+      }
+      
+      .fill-form input, 
+      .fill-form textarea {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 14px;
+      }
+      
+      .info-post {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      /* فوتر */
+      footer p {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      
+      /* تایپوگرافی موبایل */
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.6rem; }
+      h3 { font-size: 1.4rem; }
+      h4 { font-size: 1.3rem; }
+      h5 { font-size: 1.1rem; }
+      h6 { font-size: 0.9rem; }
+      
+      p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+    }
+    
+    /* موبایل‌های کوچک */
+    @media (max-width: 576px) {
+      body {
+        padding-top: 140px !important;
+      }
+      
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      h1 { font-size: 1.6rem; }
+      h2 { font-size: 1.4rem; }
+      
+      .section-heading h4 {
+        font-size: 1.5rem !important;
+      }
+      
+      .section-heading h6 {
+        font-size: 0.9rem;
+      }
+      
+      .pre-header .contact-info-container {
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .pre-header .contact-info-item {
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      .pre-header .contact-info-value {
+        max-width: 200px !important;
+      }
+      
+      .pre-header .social-media {
+        gap: 4px !important;
+      }
+      
+      .main-banner {
+        padding: 30px 0;
+      }
+      
+      .main-banner h2 {
+        font-size: 1.4rem !important;
+      }
+      
+      .right-image img {
+        max-width: 100%;
+      }
+      
+      .skill-item {
+        margin-bottom: 20px;
+      }
+      
+      .ticks-list {
+        grid-template-columns: 1fr;
+      }
+      
+      .blog-post .thumb img,
+      .post-item .thumb img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .blog-post .down-content,
+      .post-item .right-content {
+        padding: 15px;
+      }
+      
+      .contact-info-text {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 12px !important;
+      }
+      
+      .contact-info-label {
+        margin: 0 !important;
+        font-size: 11px !important;
+      }
+      
+      .contact-info-value {
+        font-size: 12px !important;
+      }
+    }
+    
+    /* موبایل‌های خیلی کوچک */
+    @media (max-width: 375px) {
+      body {
+        padding-top: 150px !important;
+      }
+      
+      .pre-header .contact-info-value {
+        font-size: 11px !important;
+      }
+      
+      .messenger-icon {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 14px;
+      }
+      
+      .border-first-button a {
+        padding: 10px 20px;
+        font-size: 13px;
+      }
+      
+      h1 { font-size: 1.4rem; }
+      h2 { font-size: 1.2rem; }
+      h3 { font-size: 1.1rem; }
+      
+      .section-heading h4 {
+        font-size: 1.3rem !important;
+      }
     }
   </style>
 </head>
 
 <body>
+  <!-- بقیه کد بدون تغییر -->
   <h1 style="position:absolute;right:-9999px;top:auto;width:1px;height:1px;overflow:hidden;margin:0;padding:0;">
     امیرعلی عابدینی درمی | Amirali Abedini | متخصص سئو و دیجیتال مارکتینگ
   </h1>
@@ -1144,5 +1473,4 @@
   });
   </script>
 </body>
-
 </html>
