@@ -1,0 +1,832 @@
+/* استایل‌های جدید برای بخش خدمات */
+.modern-services {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .modern-services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, rgba(33, 150, 243, 0.1) 0%, rgba(33, 150, 243, 0.05) 100%);
+    border-radius: 50%;
+    transform: translate(30%, -30%);
+  }
+  
+  .modern-services::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.05) 100%);
+    border-radius: 50%;
+    transform: translate(-30%, 30%);
+  }
+  
+  /* استایل مشترک برای کارت‌های خدمات و شناسنامه */
+  .modern-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px 20px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border: 1px solid rgba(33, 150, 243, 0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modern-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+    transition: all 0.4s ease;
+    z-index: 2;
+  }
+  
+  .modern-card:hover::before {
+    height: 100%;
+    opacity: 0.05;
+  }
+  
+  .modern-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(33, 150, 243, 0.15);
+    border-color: rgba(33, 150, 243, 0.2);
+  }
+  
+  /* آیکون‌های مدرن */
+  .modern-icon {
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    transition: all 0.4s ease;
+  }
+  
+  .modern-card:hover .modern-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, #4caf50 0%, #21f3a9 100%);
+  }
+  
+  .modern-icon i {
+    font-size: 28px;
+    color: white;
+  }
+  
+  /* تیترهای مدرن */
+  .modern-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 12px;
+    line-height: 1.4;
+  }
+  
+  .modern-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 2.5px;
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+  
+  .modern-card:hover .modern-title::after {
+    width: 70px;
+  }
+  
+  /* متن‌های توضیحی */
+  .modern-description {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 13.5px;
+    flex-grow: 1;
+  }
+  
+  /* لیست ویژگی‌ها */
+  .modern-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  
+  .modern-features li {
+    padding: 7px 0;
+    color: #555;
+    position: relative;
+    padding-right: 22px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+  }
+  
+  .modern-features li:hover {
+    transform: translateX(-5px);
+    color: #2196f3;
+  }
+  
+  .modern-features li::before {
+    content: '✓';
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 18px;
+    height: 18px;
+    background: #4caf50;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    transition: all 0.3s ease;
+  }
+  
+  .modern-features li:hover::before {
+    background: linear-gradient(135deg, #2196f3, #4caf50);
+    transform: scale(1.1);
+  }
+  
+  /* قیمت‌گذاری */
+  .modern-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2196f3;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+  }
+  
+  .modern-price span {
+    color: #666;
+    font-size: 12.5px;
+    font-weight: 400;
+    margin-right: 8px;
+  }
+  
+  /* هدر بخش‌ها */
+  .section-modern-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .section-modern-subtitle {
+    color: #2196f3;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: block;
+    letter-spacing: 1px;
+  }
+  
+  .section-modern-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 18px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-modern-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 70px;
+    height: 3.5px;
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+    border-radius: 2px;
+  }
+  
+  .section-modern-description {
+    color: #666;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  /* بدج‌های مدرن */
+  .modern-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    z-index: 3;
+  }
+  
+  /* کارت‌های محبوب */
+  .card-popular {
+    border: 2px solid #2196f3;
+    transform: scale(1.03);
+  }
+  
+  .card-popular .modern-badge {
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+  }
+  
+  .card-popular .modern-icon {
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+  }
+  
+  .card-popular .modern-title {
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* خلاقیت‌های ظاهری در متن */
+  .creative-text {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .creative-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    right: 0;
+    background: linear-gradient(90deg, transparent, #2196f3, transparent);
+  }
+  
+  .highlight-text {
+    background: linear-gradient(90deg, #ffeb3b, #ff9800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .modern-description::first-letter {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2196f3;
+    float: right;
+    line-height: 1;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+  
+  /* انیمیشن‌های شناور */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  .modern-card {
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .modern-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .modern-card:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .modern-card:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  .modern-card:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  
+  .modern-card:nth-child(6) {
+    animation-delay: 1s;
+  }
+  
+  /* استایل‌های جدید برای بخش شناسنامه */
+  .modern-about-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .modern-about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, rgba(33, 150, 243, 0.1) 0%, rgba(33, 150, 243, 0.05) 100%);
+    border-radius: 50%;
+    transform: translate(-30%, -30%);
+  }
+  
+  .modern-about-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(45deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.05) 100%);
+    border-radius: 50%;
+    transform: translate(30%, 30%);
+  }
+  
+  /* کارت شناسنامه */
+  .about-card-modern {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border: 1px solid rgba(33, 150, 243, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+    transition: all 0.4s ease;
+    z-index: 2;
+  }
+  
+  .about-card-modern:hover::before {
+    height: 100%;
+    opacity: 0.05;
+  }
+  
+  .about-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(33, 150, 243, 0.15);
+    border-color: rgba(33, 150, 243, 0.2);
+  }
+  
+  /* هدر کارت شناسنامه */
+  .about-card-modern-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #eee;
+  }
+  
+  .about-card-modern-avatar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .about-card-modern-avatar-img {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  .about-card-modern:hover .about-card-modern-avatar-img {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #4caf50 0%, #21f3a9 100%);
+  }
+  
+  .about-card-modern-avatar-img i {
+    font-size: 32px;
+    color: white;
+  }
+  
+  .about-card-modern-avatar-info h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .about-card-modern-avatar-info p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* آیتم‌های اطلاعات شناسنامه */
+  .about-info-modern-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f8f9ff;
+    transition: all 0.3s ease;
+  }
+  
+  .about-info-modern-item:hover {
+    background: linear-gradient(90deg, rgba(33, 150, 243, 0.1), rgba(76, 175, 80, 0.1));
+    transform: translateX(-5px);
+  }
+  
+  .about-info-modern-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    flex-shrink: 0;
+  }
+  
+  .about-info-modern-icon i {
+    font-size: 18px;
+    color: white;
+  }
+  
+  .about-info-modern-content h6 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .about-info-modern-content p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* نقل‌قول در شناسنامه */
+  .about-quote-modern {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(33, 150, 243, 0.05), rgba(76, 175, 80, 0.05));
+    border-radius: 12px;
+    border-right: 3px solid #2196f3;
+    position: relative;
+  }
+  
+  .about-quote-modern .quote-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgba(33, 150, 243, 0.2);
+    font-size: 24px;
+  }
+  
+  .about-quote-modern .quote-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  .about-quote-modern .quote-author {
+    font-size: 13px;
+    color: #2196f3;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  /* کارت مهارت‌های شناسنامه */
+  .skills-card-modern {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border: 1px solid rgba(33, 150, 243, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skills-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #2196f3, #4caf50);
+    transition: all 0.4s ease;
+    z-index: 2;
+  }
+  
+  .skills-card-modern:hover::before {
+    height: 100%;
+    opacity: 0.05;
+  }
+  
+  .skills-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(33, 150, 243, 0.15);
+    border-color: rgba(33, 150, 243, 0.2);
+  }
+  
+  .skills-card-modern-header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+  }
+  
+  .skills-card-modern-header h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+  }
+  
+  .skills-card-modern-header p {
+    font-size: 13.5px;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* آیتم‌های مهارت */
+  .skill-modern-item {
+    margin-bottom: 20px;
+  }
+  
+  .skill-modern-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .skill-modern-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .skill-modern-percentage {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2196f3;
+  }
+  
+  .skill-modern-progress {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .skill-modern-progress-bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  }
+  
+  /* فوتر کارت مهارت‌ها */
+  .skills-card-modern-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #eee;
+  }
+  
+  .stats-modern-item {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .stats-modern-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(76, 175, 80, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+  }
+  
+  .stats-modern-icon i {
+    font-size: 20px;
+    color: #2196f3;
+  }
+  
+  .stats-modern-content h5 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .stats-modern-content p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* استایل‌های جدید خلاقانه برای خدمات */
+  .service-card-glow {
+    position: relative;
+  }
+  
+  .service-card-glow::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, #2196f3, #4caf50, #2196f3);
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .service-card-glow:hover::after {
+    opacity: 1;
+    animation: glow 2s linear infinite;
+  }
+  
+  @keyframes glow {
+    0% {
+      filter: blur(5px);
+      opacity: 0.7;
+    }
+    50% {
+      filter: blur(10px);
+      opacity: 0.4;
+    }
+    100% {
+      filter: blur(5px);
+      opacity: 0.7;
+    }
+  }
+  
+  /* افکت موجی برای کارت‌ها */
+  .wave-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .wave-effect::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(33, 150, 243, 0.1);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: 1;
+  }
+  
+  .wave-effect:hover::before {
+    width: 600px;
+    height: 600px;
+  }
+  
+  /* سایه‌های داینامیک */
+  .dynamic-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.4s ease;
+  }
+  
+  .dynamic-shadow:hover {
+    box-shadow: 0 20px 50px rgba(33, 150, 243, 0.2),
+                0 0 0 1px rgba(33, 150, 243, 0.1);
+  }
+  
+  /* افکت سه‌بعدی */
+  .card-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .card-3d-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .card-3d:hover .card-3d-inner {
+    transform: rotateY(10deg) rotateX(5deg);
+  }
+  
+  /* استایل‌های ریسپانسیو */
+  @media (max-width: 992px) {
+    .card-popular {
+      transform: scale(1);
+    }
+    
+    .modern-card {
+      margin-bottom: 25px;
+    }
+    
+    .skills-card-modern-footer {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .stats-modern-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-align: right;
+    }
+    
+    .stats-modern-icon {
+      margin: 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section-modern-title {
+      font-size: 26px;
+    }
+    
+    .about-card-modern-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .about-card-modern-avatar {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .about-info-modern-item {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .about-info-modern-icon {
+      margin: 0 auto 10px;
+    }
+  }
+  i.fa, 
+i.fas, 
+i.far, 
+i.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900;
+}
