@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Disallow: /assets/
+Disallow: /vendor/
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*.json$
+Disallow: /*.png$
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.webp$
+Disallow: /*.svg$
+
+Sitemap: https://amiraliabedini103.github.io/sitemap.xml
