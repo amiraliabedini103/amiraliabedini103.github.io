@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="پرتفولیو پروژه استارتاپ فین‌تک توسط امیرعلی عابدینی - طراحی و پیاده‌سازی کامل برندینگ و سئو برای استارتاپ حوزه مالی">
+    <title>پرتفولیو: استارتاپ حوزه فین‌تک | امیرعلی عابدینی</title>
+    
+    <!-- لینک‌های CSS -->
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    
+    <style>
+        /* استایل‌های مخصوص صفحه پروژه */
+        :root {
+            --primary-color: #4da6e7;
+            --secondary-color: #726ae3; /* رنگ متفاوت برای پروژه‌ها */
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #eaeaea;
+        }
+        
+        .project-hero {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6ebff 100%);
+            padding: 120px 0 60px;
+            margin-bottom: 60px;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+        
+        .project-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .project-title {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            line-height: 1.3;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .meta-item i {
+            color: var(--secondary-color);
+        }
+        
+        .project-tag {
+            background: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .project-featured-image {
+            width: 100%;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(114, 106, 227, 0.15);
+            border: 3px solid var(--secondary-color);
+        }
+        
+        .project-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #444;
+            text-align: justify;
+        }
+        
+        .project-section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            border-right: 5px solid var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #eee;
+            font-weight: 700;
+        }
+        
+        .stats-box {
+            background: linear-gradient(135deg, #726ae3 0%, #8a84ff 100%);
+            color: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            display: inline-block;
+            padding: 0 30px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .challenge-box {
+            background: #fff5f5;
+            border-right: 4px solid #ff6b6b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        
+        .solution-box {
+            background: #f0fff4;
+            border-right: 4px solid #38a169;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .tech-item {
+            background: #e6e6ff;
+            color: #726ae3;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        
+        .tag {
+            background: #e6e6ff;
+            color: var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .tag:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .project-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+        
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            .project-section {
+                padding: 20px;
+            }
+            
+            .project-navigation {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .project-meta {
+                gap: 15px;
+            }
+            
+            .stat-item {
+                padding: 0 15px;
+                margin-bottom: 20px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+        
+        .back-to-portfolio {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .back-to-portfolio:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        
+        /* رفع مشکل ایمیل و لوگو - مثل قبلی */
+        .pre-header .contact-info-value {
+            font-size: 13px !important;
+            word-break: break-all !important;
+            max-width: 150px;
+            display: inline-block;
+        }
+        
+        .pre-header .contact-info-item {
+            min-width: 190px !important;
+            padding: 8px 12px !important;
+        }
+        
+        .logo img {
+            max-height: 45px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+        
+        @media (max-width: 768px) {
+            .pre-header .contact-info-value {
+                font-size: 11px !important;
+                max-width: 120px;
+            }
+            
+            .pre-header .contact-info-item {
+                min-width: 160px !important;
+                padding: 6px 10px !important;
+            }
+            
+            .logo img {
+                max-height: 35px !important;
+            }
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(114, 106, 227, 0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pre-Header -->
+    <div class="pre-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8 col-7">
+                    <div class="contact-info-container">
+                        <a href="tel:+989300567109" class="contact-info-item" title="تماس با من">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">شماره تماس</span>
+                                <span class="contact-info-value phone-number">0930 056 7109</span>
+                            </div>
+                        </a>
+                        <a href="mailto:amiraliabedini103@gmail.com" class="contact-info-item" title="ارسال ایمیل">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">آدرس ایمیل</span>
+                                <span class="contact-info-value">amiraliabedini103@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-5">
+                    <ul class="social-media">
+                        <li><a href="https://t.me/Arta_amir" target="_blank" rel="noopener" title="تلگرام">
+                            <span class="messenger-icon telegram-icon" aria-label="تلگرام">T</span>
+                        </a></li>
+                        <li><a href="https://eitaa.com/Arta_amir" target="_blank" rel="noopener" title="ایتا">
+                            <span class="messenger-icon eitaa-icon" aria-label="ایتا">E</span>
+                        </a></li>
+                        <li><a href="https://rubika.ir/Arta_amir_88" target="_blank" rel="noopener" title="روبیکا">
+                            <span class="messenger-icon rubika-icon" aria-label="روبیکا">R</span>
+                        </a></li>
+                        <li><a href="https://web.shad.ir/#/user/Arta_amir_88" target="_blank" rel="noopener" title="شاد">
+                            <span class="messenger-icon shad-icon" aria-label="شاد">S</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo-v3.png" alt="لوگو - امیرعلی عابدینی">
+                        </a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html">خانه</a></li>
+                            <li class="scroll-to-section"><a href="index.html#about">درباره ما</a></li>
+                            <li class="scroll-to-section"><a href="index.html#services">خدمات</a></li>
+                            <li class="scroll-to-section"><a href="index.html#portfolio" class="active">پروژه‌ها</a></li>
+                            <li class="scroll-to-section"><a href="index.html#blog">بلاگ</a></li>
+                            <li class="scroll-to-section"><a href="index.html#contact">تماس</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="index.html#contact">درخواست مشاوره</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>منو</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Hero Section -->
+    <div class="project-hero">
+        <div class="project-container">
+            <a href="index.html#portfolio" class="back-to-portfolio">
+                <i class="fa fa-arrow-right"></i> بازگشت به گالری موفقیت
+            </a>
+            <h1 class="project-title">استارتاپ حوزه فین‌تک: برندینگ کامل و سئو پیشرفته</h1>
+            
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fa fa-user"></i>
+                    <span class="project-tag">مدیر پروژه: امیرعلی عابدینی</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-calendar"></i>
+                    <span>مهر - بهمن ۱۴۰۳</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-clock"></i>
+                    <span>زمان پروژه: ۴ ماه</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-industry"></i>
+                    <span>صنعت: فناوری مالی (FinTech)</span>
+                </div>
+            </div>
+            
+            <img src="Fintek-image.png" width="40%" height="40%" alt="پروژه استارتاپ فین‌تک" class="project-featured-image">
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <div class="project-content">
+            <!-- مقدمه پروژه -->
+            <div class="project-section">
+                <h2 class="section-title">معرفی پروژه: چالش‌های استارتاپ ایرانی در حوزه فین‌تک</h2>
+                <p>سلام! <strong>امیرعلی عابدینی</strong> هستم، مدیر این پروژه جذاب. امروز می‌خواهم داستان همکاری با یک <span class="tech-item">استارتاپ نوپای فین‌تک</span> رو براتون تعریف کنم که محصولی انقلابی در حوزه پرداخت‌های آنلاین ارائه می‌داد.</p>
+                <p>چالش اصلی: چگونه یک استارتاپ ایرانی در حوزه حساس مالی می‌تواند <span class="tech-item">اعتماد مخاطبان</span> رو جلب کند و در رقابت با شرکت‌های بزرگ بین‌المللی موفق شود؟</p>
+                
+                <div class="stats-box">
+                    <div class="stat-item">
+                        <span class="stat-number">۲۲۰٪</span>
+                        <span class="stat-label">رشد ترافیک</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">۲٫۳x</span>
+                        <span class="stat-label">افزایش نرخ تبدیل</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">۱۲</span>
+                        <span class="stat-label">کلمه کلیدی رتبه ۱</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">۸۹٪</span>
+                        <span class="stat-label">رضایت مشتری</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بخش 1 -->
+            <div class="project-section">
+                <h2 class="section-title">۱. طراحی هویت بصری برند: اعتماد در نگاه اول</h2>
+                <p>در حوزه مالی، <span class="tech-item">اعتبار بصری</span> از هر چیزی مهم‌تر است! ما از صفر شروع کردیم:</p>
+                
+                <div class="challenge-box">
+                    <h4><i class="fa fa-exclamation-triangle"></i> چالش اصلی:</h4>
+                    <p>استارتاپ ظاهری آماتور داشت که برای کاربران مالی غیرقابل اعتماد بود. رنگ‌بندی نامناسب، لوگوی ضعیف و طراحی قدیمی.</p>
+                </div>
+                
+                <div class="solution-box">
+                    <h4><i class="fa fa-lightbulb"></i> راه‌حل <strong>امیرعلی عابدینی</strong>:</h4>
+                    <ul>
+                        <li><strong>پالت رنگی جدید:</strong> آبی نیلی (نماد اعتماد) + طلایی (نماد ارزش)</li>
+                        <li><strong>لوگوی مدرن:</strong> ترکیب نماد امنیت + تکنولوژی</li>
+                        <li><strong>تایپوگرافی حرفه‌ای:</strong> فونت‌های خوانا و جدی</li>
+                        <li><strong>ایکون‌ساختار:</strong> مجموعه‌ای یکپارچه از آیکون‌ها</li>
+                    </ul>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="assets/images/portfolio-01.jpg" alt="طراحی اولیه لوگو">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/portfolio-02.jpg" alt="پالت رنگی جدید">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/portfolio-03.jpg" alt="طراحی نهایی">
+                    </div>
+                </div>
+            </div>
+
+            <!-- بخش 2 -->
+            <div class="project-section">
+                <h2 class="section-title">۲. طراحی وبسایت: امنیت + کاربرپسندی</h2>
+                <p>وبسایت یک شرکت فین‌تک باید دو ویژگی داشته باشد: <span class="tech-item">امنیت محور</span> و <span class="tech-item">کاربرپسند</span>.</p>
+                
+                <p><strong>مشکلات اولیه:</strong></p>
+                <ul>
+                    <li>فرم‌های پیچیده ثبت‌نام (۱۲ فیلد!)</li>
+                    <li>عدم نمایش گواهی‌های امنیتی</li>
+                    <li>عدم ریسپانسیو بودن کامل</li>
+                    <li>سرعت لود پایین (۶+ ثانیه)</li>
+                </ul>
+                
+                <p><strong>راهکارهای اجرا شده:</strong></p>
+                <ol>
+                    <li>فرم‌های مرحله‌ای با اعتبارسنجی لحظه‌ای</li>
+                    <li>نمایش SSL و گواهی‌های امنیتی در فوتر</li>
+                    <li>طراحی موبایل‌فرست با UX عالی</li>
+                    <li>بهینه‌سازی سرعت (کاهش به ۱٫۸ ثانیه)</li>
+                </ol>
+                
+                <div class="highlight-box">
+                    <p><strong>نکته طلایی از امیرعلی عابدینی:</strong> در حوزه مالی، هر ثانیه اضافی لود = از دست دادن ۷٪ مشتریان بالقوه! ما با بهینه‌سازی تصاویر و کدها، سرعت رو ۷۰٪ بهبود دادیم.</p>
+                </div>
+            </div>
+
+            <!-- بخش 3 -->
+            <div class="project-section">
+                <h2 class="section-title">۳. استراتژی سئو تخصصی فین‌تک</h2>
+                <p>سئو در حوزه مالی متفاوت است! نیاز به <span class="tech-item">محتواهای تخصصی</span> و <span class="tech-item">لینک‌سازی معتبر</span> دارد.</p>
+                
+                <div class="tech-stack">
+                    <span class="tech-item">تحقیق کلمات کلیدی</span>
+                    <span class="tech-item">سئو تکنیکال</span>
+                    <span class="tech-item">محتواهای E-A-T</span>
+                    <span class="tech-item">لینک‌سازی دایرکتوری</span>
+                    <span class="tech-item">سئو محلی بانکی</span>
+                </div>
+                
+                <p><strong>نتایج سئو پس از ۴ ماه:</strong></p>
+                <ul>
+                    <li>رتبه ۱ برای "اپلیکیشن پرداخت ایرانی"</li>
+                    <li>رتبه ۲ برای "کیف پول الکترونیکی"</li>
+                    <li>رتبه ۳ برای "درگاه پرداخت امن"</li>
+                    <li>رشد ۲۲۰٪ ترافیک ارگانیک</li>
+                </ul>
+                
+                <p>من <strong>امیرعلی عابدینی</strong> شخصاً استراتژی محتوایی رو طراحی کردم: مقالات تخصصی مالی + ویدئوهای آموزشی + اینفوگرافیک‌های حقوقی.</p>
+            </div>
+
+            <!-- بخش 4 -->
+            <div class="project-section">
+                <h2 class="section-title">۴. کمپین تبلیغات هوشمند مالی</h2>
+                <p>تبلیغات در حوزه مالی نیاز به <span class="tech-item">هدف‌گیری فوق‌العاده دقیق</span> دارد.</p>
+                
+                <div class="challenge-box">
+                    <h4><i class="fa fa-exclamation-triangle"></i> محدودیت‌ها:</h4>
+                    <ul>
+                        <li>ممنوعیت تبلیغات مستقیم در برخی پلتفرم‌ها</li>
+                        <li>هزینه بالای کلیک (CPC بالا)</li>
+                        <li>محدودیت‌های قانونی تبلیغات مالی</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-box">
+                    <h4><i class="fa fa-lightbulb"></i> راهکارهای خلاقانه:</h4>
+                    <ul>
+                        <li>تبلیغات محتوامحور به جای محصول‌محور</li>
+                        <li>استفاده از تبلیغات LinkedIn برای مخاطبان B2B</li>
+                        <li>بازاریابی ارجاعی (Referral Marketing)</li>
+                        <li>همکاری با بلاگرهای اقتصادی معتبر</li>
+                    </ul>
+                </div>
+                
+                <p>نتیجه: <span class="tech-item">هزینه جذب مشتری ۳۵٪ کاهش</span> و <span class="tech-item">نرخ تبدیل ۲٫۳ برابر</span> شد!</p>
+            </div>
+
+            <!-- بخش 5 -->
+            <div class="project-section">
+                <h2 class="section-title">۵. نتایج و تأثیرات کسب‌وکار</h2>
+                <p>پس از ۴ ماه همکاری، نتایج چشمگیر بود:</p>
+                
+                <div class="stats-box">
+                    <div class="stat-item">
+                        <span class="stat-number">۱۴۵٪</span>
+                        <span class="stat-label">افزایش کاربران فعال</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">۲٫۸x</span>
+                        <span class="stat-label">رشد درآمد ماهانه</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">۶۷٪</span>
+                        <span class="stat-label">کاهش نرخ پرش</span>
+                    </div>
+                </div>
+                
+                <p><strong>تأثیرات کلیدی:</strong></p>
+                <ul>
+                    <li>جذب سرمایه‌گذار جدید به مبلغ ۵ میلیارد تومان</li>
+                    <li>افزایش اعتبار برند در صنعت فین‌تک</li>
+                    <li>کسب جایزه بهترین استارتاپ مالی سال</li>
+                    <li>توسعه تیم از ۷ به ۲۰ نفر</li>
+                </ul>
+                
+                <p><strong>امیرعلی عابدینی</strong> در این پروژه نه فقط به عنوان مشاور، بلکه به عنوان شریک استراتژیک عمل کرد و هنوز هم به عنوان مشاور برند با این استارتاپ همکاری می‌کند.</p>
+            </div>
+
+            <!-- تگ‌ها -->
+            <div class="project-tags">
+                <span class="tag">فین‌تک</span>
+                <span class="tag">برندینگ کامل</span>
+                <span class="tag">سئو مالی</span>
+                <span class="tag">طراحی UX</span>
+                <span class="tag">تبلیغات هوشمند</span>
+                <span class="tag">استارتاپ</span>
+                <span class="tag">امیرعلی عابدینی</span>
+            </div>
+
+            <!-- تکنولوژی‌ها -->
+            <div class="project-section">
+                <h2 class="section-title">تکنولوژی‌های استفاده شده</h2>
+                <div class="tech-stack">
+                    <span class="tech-item">WordPress</span>
+                    <span class="tech-item">React</span>
+                    <span class="tech-item">Google Analytics 4</span>
+                    <span class="tech-item">Google Ads</span>
+                    <span class="tech-item">LinkedIn Ads</span>
+                    <span class="tech-item">Ahrefs</span>
+                    <span class="tech-item">Figma</span>
+                    <span class="tech-item">Cloudflare</span>
+                    <span class="tech-item">Adobe Creative Suite</span>
+                </div>
+            </div>
+
+            <!-- نویگیشن پروژه‌ها -->
+            <div class="project-navigation">
+                <a href="index.html#portfolio" class="nav-btn">
+                    <i class="fa fa-arrow-right"></i>
+                    <span>بازگشت به پرتفولیو<br><small>مشاهده همه پروژه‌ها</small></span>
+                </a>
+                <a href="project-restaurant.html" class="nav-btn">
+                    <span>پروژه بعدی<br><small>رستوران‌های زنجیره‌ای</small></span>
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>تمام حقوق این وبسایت برای <strong>امیرعلی عابدینی</strong> محفوظ است. © ۱۴۰۴
+                        <br>طراحی و توسعه: <a href="index.html" title="امیرعلی عابدینی">امیرعلی عابدینی</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+    <script>
+        // اسکریپت مخصوص صفحه پروژه
+        document.addEventListener('DOMContentLoaded', function() {
+            // انیمیشن برای آمارها
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const text = stat.textContent;
+                let finalNumber;
+                
+                // تشخیص نوع عدد
+                if (text.includes('٪')) {
+                    finalNumber = parseInt(text);
+                    stat.textContent = '۰٪';
+                    
+                    const increment = finalNumber / 50;
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= finalNumber) {
+                            stat.textContent = finalNumber + '٪';
+                            clearInterval(timer);
+                        } else {
+                            stat.textContent = Math.floor(current) + '٪';
+                        }
+                    }, 20);
+                } else if (text.includes('x')) {
+                    finalNumber = parseFloat(text);
+                    stat.textContent = '۰x';
+                    
+                    const increment = finalNumber / 30;
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= finalNumber) {
+                            stat.textContent = finalNumber.toFixed(1) + 'x';
+                            clearInterval(timer);
+                        } else {
+                            stat.textContent = current.toFixed(1) + 'x';
+                        }
+                    }, 30);
+                } else {
+                    // عدد معمولی
+                    finalNumber = parseInt(text);
+                    stat.textContent = '۰';
+                    
+                    const increment = finalNumber / 30;
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= finalNumber) {
+                            stat.textContent = finalNumber;
+                            clearInterval(timer);
+                        } else {
+                            stat.textContent = Math.floor(current);
+                        }
+                    }, 30);
+                }
+            });
+            
+            // مدیریت اسکرول هدر
+            window.addEventListener('scroll', function() {
+                const preHeader = document.querySelector('.pre-header');
+                if (window.scrollY > 100) {
+                    preHeader.style.backdropFilter = 'blur(20px)';
+                    preHeader.style.background = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    preHeader.style.backdropFilter = 'blur(15px)';
+                    preHeader.style.background = 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+            
+            // گالری تصاویر
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('zoomed');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
